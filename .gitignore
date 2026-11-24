@@ -1,0 +1,23 @@
+node_modules/
+dist/
+.next/
+*.log
+.DS_Store
+Thumbs.db
+
+# secrets: never commit real values
+.env
+.env.local
+.env.*.local
+
+# Backups contain customers' personal data: never commit them
+backend/backups/
+backups/
+node_modules/
+.env
+.env.local
+.env.production
+dist/
+build/
+.next/
+coverage/

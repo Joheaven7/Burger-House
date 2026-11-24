@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  /* Luxury Brand Palette */
+  --color-charcoal: #171717;
+  --color-surface-dark: #24201e;
+  --color-cream: #f4efe6;
+  --color-surface: #ffffff;
+
+  /* Primary Brand Actions: Burnt Orange */
+  --color-orange: #b85c32;
+  --color-orange-dark: #97441e;
+
+  /* Accents & Highlights: Copper Gold */
+  --color-copper: #c49a62;
+  --color-copper-dark: #8c652d;
+
+  /* Text & Contrast */
+  --color-ink: #171717;
+  --color-muted: #6e655f;
+  --color-muted-dark: #a39890;
+
+  /* Backward-compatible aliases for existing components */
+  --color-tomato: #b85c32;
+  --color-tomato-dark: #97441e;
+  --color-mustard: #c49a62;
+
+  /* Shape tokens */
+  --radius-card: 1rem;
+  --radius-control: 0.75rem;
+
+  /* Elevation */
+  --shadow-luxury: 0 12px 32px -8px rgba(23, 23, 23, 0.12);
+  --shadow-glow: 0 0 30px -5px rgba(184, 92, 50, 0.3);
+
+  /* Fonts loaded in app/layout.tsx and exposed via CSS variables */
+  --font-display: var(--font-oswald), ui-sans-serif, system-ui, "Segoe UI", sans-serif;
+  --font-editorial: var(--font-playfair), Georgia, serif;
+  --font-body: var(--font-inter), ui-sans-serif, system-ui, "Segoe UI", sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-orange);
+    outline-offset: 2px;
+  }
+}
+
+/* Respect users who ask for less motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
